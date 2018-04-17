@@ -1,6 +1,7 @@
-//const, string, double, if-else, cout, cin
+//const, int, string, double, if-else, cout, cin
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
