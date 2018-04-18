@@ -3,6 +3,8 @@
 /*
 Prompts name, score from text file.
 Prompts sum of the scores.
+
+미완성입니다.
 */
 
 #include <iostream>
@@ -13,9 +15,13 @@ using namespace std;
 int main()
 {
     string text;
+    string filePath = "scoreBoard.txt";
     fstream inputStream;
     int num = 0;
     int sum = 0;
+
+    string name;
+    int score;
 
     inputStream.open("scoreBoard.txt");
 
@@ -32,9 +38,24 @@ int main()
             
     }
 
-    inputStream.close();
-
     cout << "\nsum of the scores: " << sum << endl;
+    
+//    ofstream writeFile(filePath.data());
+
+    num = 0;
+
+    do
+    {
+        cout << "name: ";
+        cin >> name;
+        
+        cout << "score: ";
+        cin >> score;
+
+        inputStream << name << " " << score;
+    }while(num++ < 3);
+
+    inputStream.close();
 
     return 0;
 }
