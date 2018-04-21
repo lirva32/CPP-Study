@@ -1,4 +1,4 @@
-//while, do-while, ++ in while, break, continue, fstream
+//while, ++ in while, break, continue, fstream
 
 /*
 Prompts name, score from text file.

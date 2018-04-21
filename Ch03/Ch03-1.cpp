@@ -15,7 +15,7 @@ void showForce(double m, char mode);
 
 int main()
 {
-    double mass;;
+    double mass;
     int force;
     char mode = outputFormat();
     
@@ -34,11 +34,11 @@ char outputFormat()
 
     do
     {
-        cout << "To set output format, input a character according to following:\n" << "round: r / floor: f\n"
-        << "\noutput format(r/f): ";
+        cout << "To set output format, input a character according to following:\n" << "round: r / floor: f / decimal: d\n"
+        << "\noutput format(r/f/d): ";
         cin >> input;
         cout << endl;
-    } while(input != 'r' && input != 'f');
+    } while(not (input == 'r' or input == 'f' or input == 'd'));
 
     return input;
 }
@@ -57,5 +57,12 @@ void showForce(double m, char mode)
         case 'f':
             cout << floor(Force) << "N" << endl;
             break;
+        case 'd':
+            cout.setf(ios::fixed);
+            cout.setf(ios::showpoint);
+            cout.precision(2);
+            cout << Force << "N" << endl;
+            break;
+
     }
 }
