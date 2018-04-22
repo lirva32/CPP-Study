@@ -1,5 +1,5 @@
 //<cmath>: pow(), round(), floor()
-//switch, char, global variables
+//switch, char, global variables, decimal precision
 
 #include <iostream>
 #include <cstdlib>
